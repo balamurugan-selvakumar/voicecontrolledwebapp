@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Controlled Web Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="title">🎤 Voice Control Hub</h1>
+                <p class="subtitle">Control your browser with voice commands</p>
+            </div>
+            
+            <!-- Theme Toggle -->
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <span class="toggle-icon">🌙</span>
+            </button>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Control Panel -->
+            <section class="control-panel">
+                <div class="language-selector">
+                    <label for="language">Language:</label>
+                    <select id="language">
+                        <option value="en-US">English</option>
+                        <option value="ta-IN">Tamil (தமிழ்)</option>
+                    </select>
+                </div>
+
+                <!-- Microphone Button -->
+                <div class="mic-container">
+                    <button class="mic-button" id="micButton" aria-label="Start voice recognition">
+                        <span class="mic-icon">🎤</span>
+                        <span class="pulse"></span>
+                    </button>
+                    <p class="mic-status" id="micStatus">Click to start listening</p>
+                </div>
+
+                <!-- Continuous Listening Toggle -->
+                <div class="toggle-option">
+                    <input type="checkbox" id="continuousListening" />
+                    <label for="continuousListening">Continuous Listening Mode</label>
+                </div>
+            </section>
+
+            <!-- Recognition Output Section -->
+            <section class="output-section">
+                <h2>Recognized Speech</h2>
+                <div class="output-box" id="output">
+                    <p class="placeholder">Start listening to see recognized speech here...</p>
+                </div>
+
+                <!-- Confidence Indicator -->
+                <div class="confidence-bar" id="confidenceBar">
+                    <div class="confidence-fill"></div>
+                </div>
+                <small class="confidence-text" id="confidenceText">Confidence: --</small>
+            </section>
+
+            <!-- Voice Typing Input -->
+            <section class="voice-typing-section">
+                <h2>Voice Typing</h2>
+                <div class="input-container">
+                    <input type="text" id="voiceInput" placeholder="Voice input will appear here..." />
+                    <button id="clearVoiceInput" class="btn btn-secondary">Clear</button>
+                </div>
+            </section>
+
+            <!-- Available Commands -->
+            <section class="commands-section">
+                <h2>Available Commands</h2>
+                <div class="commands-grid" id="commandsGrid">
+                    <!-- Commands will be populated by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Command History -->
+            <section class="history-section">
+                <div class="history-header">
+                    <h2>Command History</h2>
+                    <button id="clearHistory" class="btn btn-secondary">Clear History</button>
+                </div>
+                <div class="history-container" id="historyContainer">
+                    <p class="placeholder">No commands executed yet</p>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2026 Voice Control Hub. Powered by Web Speech API</p>
+        </footer>
+    </div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>

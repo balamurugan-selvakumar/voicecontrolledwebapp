@@ -1,0 +1,28 @@
+{
+  "name": "voice-controlled-web-app",
+  "version": "1.0.0",
+  "description": "A complete voice-controlled web application using Web Speech API and Node.js/Express",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "voice",
+    "speech-recognition",
+    "web-app",
+    "express",
+    "node.js",
+    "web-speech-api"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
